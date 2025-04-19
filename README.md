@@ -33,7 +33,7 @@ Before setting up the project, make sure you have the following tools installed 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/Dream-Journal.git
+   git clone https://github.com/guptakushal03/Dream-Journal.git
    cd Dream-Journal
    ```
 
@@ -108,9 +108,8 @@ This project uses GitHub Actions to automate the deployment process. When you pu
 ├── src/
 │   ├── components/        # React components
 │   ├── firebase/          # Firebase config and utilities
-│   ├── App.tsx            # Main App component
-│   ├── index.tsx          # Entry point for React app
-│   └── ...                # Other project files
+│   ├── utils/             # Utils    
+│   └── App.tsx            # Main App component
 ├── .github/               # GitHub Actions workflow
 │   └── workflows/         # CI/CD pipeline configuration
 ├── .gitignore             # Files to ignore in GitHub
@@ -119,80 +118,3 @@ This project uses GitHub Actions to automate the deployment process. When you pu
 ├── package-lock.json      # Locked versions of npm packages
 └── README.md              # Project documentation
 ```
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-
-Feel free to modify the `README.md` to better fit the exact details of your project if needed.
-
-### Key Sections Explained:
-
-- **Project Overview**: Describes what the app does.
-
-
-
-
-### **Project Description: Dream Journal**
-
-**Dream Journal** is a web-based application that allows users to record and reflect on their dreams. The app aims to provide a personal space where users can capture their nightly experiences, analyze their emotions through sentiment analysis, and visualize their mental and emotional states through an interactive calendar. The project uses modern web technologies like **React**, **TypeScript**, and **Firebase**, and integrates with the **Sentiment.js** library to analyze the emotional tone of journal entries.
-
-The key features include:
-
-1. **Add & Edit Journal Entries**:
-   - Users can add new journal entries with a title and body text.
-   - Entries can be edited after creation.
-   - The application automatically analyzes the sentiment of the text to categorize each entry as **Positive**, **Neutral**, or **Negative**.
-
-2. **Sentiment Analysis**:
-   - The app uses **Sentiment.js**, a sentiment analysis library, to analyze the tone of each journal entry.
-   - Based on the sentiment score, each entry is classified as **Positive**, **Neutral**, or **Negative**.
-   - These sentiments are color-coded and used to provide visual feedback to the user.
-
-3. **Visual Sentiment Calendar**:
-   - Each entry is associated with a specific date, and the sentiment of each entry is displayed as a **colored dot** on a **monthly calendar**.
-   - The colors represent the sentiment of the entry: 
-     - **Green** for Positive
-     - **Gray** for Neutral
-     - **Red** for Negative
-   - The calendar provides a quick visual overview of the user’s emotional state over time.
-
-4. **Firebase Integration**:
-   - **Firebase Firestore** is used to store journal entries, which are retrieved and displayed in the app.
-   - Users' entries are stored in the cloud, allowing them to be accessed and edited at any time from any device.
-
-5. **Real-time Updates**:
-   - The app automatically fetches the latest journal entries and updates the user interface in real-time.
-   - This ensures that users see their changes immediately after submitting or updating an entry.
-
-### **Key Features Summary**:
-
-- **Create and Edit Entries**: Add new journal entries with sentiment analysis, or edit existing entries.
-- **Sentiment Analysis**: The app categorizes entries as Positive, Neutral, or Negative based on text analysis.
-- **Interactive Calendar**: View your emotional journey over time with color-coded calendar dots.
-- **Firebase Cloud Storage**: Data is securely stored and accessible across devices.
-- **Modern Web Technologies**: Built with **React**, **TypeScript**, **TailwindCSS**, **Firebase**, and **Sentiment.js**.
-
-### **Technologies Used**:
-
-- **React**: A JavaScript library for building user interfaces, specifically used here to build the frontend of the app.
-- **TypeScript**: A superset of JavaScript that adds type safety to the project, making the code easier to maintain.
-- **Firebase Firestore**: A NoSQL database provided by Google’s Firebase platform, used to store journal entries.
-- **Sentiment.js**: A library used for performing sentiment analysis on the text of journal entries.
-- **TailwindCSS**: A utility-first CSS framework used to style the app quickly and responsively.
-- **Vite**: A build tool that serves the app during development and bundles it for production.
-
-### **User Experience**:
-
-1. **Simple Interface**: Users can easily navigate the app to add and edit journal entries.
-2. **Real-time Feedback**: As soon as a journal entry is submitted, its sentiment is analyzed and displayed in the form of colored dots on a calendar.
-3. **Reflective**: The interactive calendar allows users to look back on their emotional state over time, helping them reflect on patterns in their mood and thoughts.
-
-### **Future Improvements**:
-
-- **Search and Filter**: Allow users to search for specific entries or filter by sentiment.
-- **User Authentication**: Enable users to log in and have personalized journal entries.
-- **Advanced Sentiment Analysis**: Incorporate more advanced AI tools for more nuanced sentiment analysis (e.g., extracting specific emotions like sadness or happiness).
-- **Mood Tracking**: Track user’s mood trends over time and provide insights or advice based on their journal data.
