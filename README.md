@@ -103,18 +103,29 @@ This project uses GitHub Actions to automate the deployment process. When you pu
 
 ```
 .
-├── dist/                  # Production build folder (auto-generated)
-├── public/                # Public assets (index.html, etc.)
-├── src/
-│   ├── components/        # React components
-│   ├── firebase/          # Firebase config and utilities
-│   ├── utils/             # Utils    
-│   └── App.tsx            # Main App component
-├── .github/               # GitHub Actions workflow
-│   └── workflows/         # CI/CD pipeline configuration
-├── .gitignore             # Files to ignore in GitHub
-├── firebase.json          # Firebase Hosting configuration
-├── package.json           # npm dependencies and scripts
-├── package-lock.json      # Locked versions of npm packages
-└── README.md              # Project documentation
+├── dist/                     # Production build folder (auto-generated)
+├── public/                   # Public assets (e.g., index.html)
+├── src/                      # Source code
+│   ├── components/           # React components
+│   ├── firebase/             # Firebase initialization and config
+│   ├── utils/                # Utility functions
+│   ├── App.css               # Styles for the main App component
+│   ├── app.tsx               # Main App component (TypeScript React)
+│   ├── index.css             # Global styles
+│   ├── main.tsx              # Entry point for React app
+│   └── vite-env.d.ts         # Vite environment types
+├── .firebase/                # Firebase emulator/cache data
+├── .github/                  # GitHub configuration
+│   └── workflows/            # GitHub Actions (CI/CD workflows)
+├── .firebaserc               # Firebase project configuration
+├── .gitignore                # Git ignored files
+├── eslint.config.js          # ESLint configuration
+├── firebase.json             # Firebase hosting configuration
+├── index.html                # HTML entry point
+├── package.json              # Project dependencies and scripts
+├── package-lock.json         # Locked npm versions
+├── postcss.config.js         # PostCSS configuration
+├── tailwind.config.js        # Tailwind CSS configuration
+├── tsconfig.app.json         # TypeScript config for the app
+└── README.md                 # Project documentation
 ```
